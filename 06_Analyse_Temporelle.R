@@ -27,7 +27,7 @@ evolution_mensuelle <- evolution_mensuelle %>%
   mutate(Mois_Nom = factor(Mois_Nom, levels = Mois_Nom))
 
 # Histogramme avec mois ordonnés
-ggplot(evolution_mensuelle, aes(x = Mois_Nom, y = n, fill = n)) +
+hist<- ggplot(evolution_mensuelle, aes(x = Mois_Nom, y = n, fill = n)) +
   geom_bar(stat = "identity") +
   scale_fill_gradient(low = "lightblue", high = "darkblue") +
   labs(
@@ -41,3 +41,4 @@ ggplot(evolution_mensuelle, aes(x = Mois_Nom, y = n, fill = n)) +
     plot.title = element_text(hjust = 0.5, face = "bold"),
     legend.position = "none"
   )
+print(hist)
