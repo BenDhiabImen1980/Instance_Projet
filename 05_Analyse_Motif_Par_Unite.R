@@ -3,7 +3,10 @@
 library(ggplot2)
 library(dplyr)
 
+# 1️⃣ Charger les données
 
+url <- "[https://raw.githubusercontent.com/BenDhiabImen1980/Instance_Projet/refs/heads/main/instances_clean_v1.csv](https://raw.githubusercontent.com/BenDhiabImen1980/Instance_Projet/refs/heads/main/instances_clean_v1.csv)"
+data_clean <- read.csv(url)
 
 # 2️⃣ Préparer les données par Unité Traitante
 
