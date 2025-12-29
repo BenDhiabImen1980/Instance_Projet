@@ -1,8 +1,6 @@
 library(ggplot2)
 library(dplyr)
 
-# 1. Convertir Unité Traitante en facteur
-data_clean$`Unité Traitante` <- as.factor(data_clean$`Unité Traitante`)
 
 
 # 2. Préparation des données par Unité Traitante
