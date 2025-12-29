@@ -2,13 +2,15 @@ library(ggplot2)
 library(dplyr)
 
 # Normaliser les noms de colonnes (OBLIGATOIRE WebR)
-names(data_clean) <- make.names(names(data_clean))
+stats_par_unite <- data_clean
+
+stats_par_unite <- data_clean %>% rename(Unite = `Unité Traitante`)
 
 # 2. Préparation des données par Unité Traitante
-stats_par_unite <- data_clean %>%
-  group_by(Unite.Traitante, Motif) %>%
+stats_par_unite <- stats_par_unite%>%
+  group_by(Unite, Motif) %>%
   summarise(Nombre = n(), .groups = "drop") %>%
-  group_by(Unite.Traitante) %>%
+  group_by(Unite) %>%
   mutate(
     Pourcentage_Unite = round(Nombre / sum(Nombre) * 100, 1),
     Total_Unite = sum(Nombre)
@@ -18,7 +20,7 @@ stats_par_unite <- data_clean %>%
 # 3. Diagramme en barres empilées
 p_barres_empilees <- ggplot(
   stats_par_unite,
-  aes(x = Unite.Traitante, y = Nombre, fill = Motif)
+  aes(x = Unite, y = Nombre, fill = Motif)
 ) +
   geom_bar(stat = "identity") +
   labs(
