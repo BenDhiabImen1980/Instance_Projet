@@ -5,23 +5,6 @@ library(dplyr)
 instances_par_offre <- data_clean %>%
   count(Offre, sort = TRUE)
 
-# Graphique en barres
-barre <- ggplot(instances_par_offre, aes(x = reorder(Offre, n), y = n, fill = n)) +
-  geom_bar(stat = "identity") +
-  coord_flip() +
-  scale_fill_gradient(low = "lightcoral", high = "darkred") +
-  labs(
-    title = "Nombre d'instances par type d'offre",
-    x = "Type d'offre",
-    y = "Nombre d'instances"
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, face = "bold"),
-    legend.position = "none"
-  )
-
-print(barre)
 
 # Préparer les données
 top_offres <- data_clean %>%
@@ -49,5 +32,3 @@ hist <- ggplot(top_offres, aes(x = reorder(Offre, n), y = n)) +
   ) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.15)))
 print(hist)
-
-
