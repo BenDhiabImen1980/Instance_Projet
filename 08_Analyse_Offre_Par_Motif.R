@@ -12,7 +12,7 @@ offre_motif <- data_clean %>%
   head(5)
 
 # Graphique
- ggplot(offre_motif, aes(x = reorder(Offre, n), y = n, fill = Motif)) +
+ hist <- ggplot(offre_motif, aes(x = reorder(Offre, n), y = n, fill = Motif)) +
   geom_bar(stat = "identity") +
   coord_flip() +
   labs(
@@ -25,3 +25,4 @@ offre_motif <- data_clean %>%
   theme(
     plot.title = element_text(hjust = 0.5, face = "bold")
   )
+print(hist)
