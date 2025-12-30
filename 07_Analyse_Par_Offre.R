@@ -21,7 +21,7 @@ barre <- ggplot(instances_par_offre, aes(x = reorder(Offre, n), y = n, fill = n)
     legend.position = "none"
   )
 
-print (barre)
+
 
 # Préparer les données
 top_offres <- data_clean %>%
@@ -48,4 +48,5 @@ hist <- ggplot(top_offres, aes(x = reorder(Offre, n), y = n)) +
     panel.grid.major.y = element_blank()
   ) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.15)))
-print(hist)
+print(hist,barre)
+
