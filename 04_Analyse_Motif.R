@@ -18,12 +18,6 @@ pourcentage_dominant <- stats_motif$Pourcentage[1]
 # Créer une colonne pour la légende avec tous les pourcentages
 stats_motif$Motif_Legende <- paste0(stats_motif$Motif, " (", stats_motif$Pourcentage, "%)")
 
-# Afficher un résumé dans la console
-cat("=== RÉSUMÉ DES 6 CATÉGORIES DE MOTIF ===\n")
-print(stats_motif[, c("Motif", "Nombre", "Pourcentage")])
-cat("\nTotal des observations:", sum(stats_motif$Nombre), "\n")
-cat("Motif dominant:", motif_dominant, "(", pourcentage_dominant, "%)\n")
-
 # Créer le camembert
 camembert <- ggplot(stats_motif, aes(x = "", y = Pourcentage, fill = Motif_Legende)) +
   geom_bar(stat = "identity", width = 1, color = "white") +
@@ -53,4 +47,5 @@ print(camembert)
 
 # Option : Sauvegarder l'image
 # ggsave("camembert_motifs.png", camembert, width = 11, height = 8, dpi = 300)
+
 # cat("\nGraphique sauvegardé sous 'camembert_motifs.png'\n")
