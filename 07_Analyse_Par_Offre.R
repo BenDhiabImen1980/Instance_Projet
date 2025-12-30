@@ -27,8 +27,9 @@ hist <- ggplot(top_offres, aes(x = reorder(Offre, n), y = n)) +
   theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
-    axis.text.y = element_text(size = 11),
+    axis.text.y = element_text(size = 11,face ="bold"),
     panel.grid.major.y = element_blank()
   ) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.15)))
 print(hist)
+
