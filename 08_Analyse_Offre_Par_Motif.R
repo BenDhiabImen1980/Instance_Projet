@@ -25,4 +25,3 @@ hist <- ggplot(offre_motif, aes(x = reorder(Offre, n), y = n, fill = Motif)) +
   theme(
     plot.title = element_text(hjust = 0.5, face = "bold")
   )
-print (hist)
