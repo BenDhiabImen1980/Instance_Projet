@@ -1,4 +1,4 @@
-# Instance_Projet
+<img width="603" height="690" alt="image" src="https://github.com/user-attachments/assets/304c09d1-b615-40fc-bdac-525d82549c4c" /><img width="603" height="690" alt="image" src="https://github.com/user-attachments/assets/304c09d1-b615-40fc-bdac-525d82549c4c" /># Instance_Projet
 Mini projet du module R
 
 📊 Analyse des Instances des Fournisseurs Internet - Région de Sousse
@@ -16,10 +16,14 @@ Fournir des recommandations stratégiques basées sur les données
 📁 Structure du Projet
 mini_projet/
 ├── Presentation/
-│   ├── presentation.qmd                # Document Quarto principal (présentation RevealJS)
+│   ├── Ma-presentation.qmd             # Document Quarto principal (présentation RevealJS)
 │   ├── essaie.qmd                      # Document de test
 │   └── _extensions/                    # Extensions Quarto (WebR)
 ├── scripts/
+    ├── 00-exploration-dataset-skimr.R   # Exploration du dataset avec skimr
+    ├── 01_chargement.R                  # Exploration du dataset
+    ├── 02_removeCol                     # script de nettoyage 
+    ├── 03_regroupement                  # script de transformation
 │   ├── 04_Analyse_Motif.R               # Analyse de distribution des motifs
 │   ├── 05_Analyse_MotifUnite.R          # Analyse par unité traitante
 │   ├── 06_Analyse_Temporelle.R          # Analyse des tendances temporelles
@@ -37,7 +41,6 @@ Logiciels requis
 R (version ≥ 4.0)
 RStudio (recommandé)
 Quarto (version ≥ 1.3)
-
 
 Packages R nécessaires
 rinstall.packages(c(
