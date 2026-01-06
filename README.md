@@ -1,4 +1,3 @@
-<img width="603" height="690" alt="image" src="https://github.com/user-attachments/assets/304c09d1-b615-40fc-bdac-525d82549c4c" /><img width="603" height="690" alt="image" src="https://github.com/user-attachments/assets/304c09d1-b615-40fc-bdac-525d82549c4c" /># Instance_Projet
 Mini projet du module R
 
 📊 Analyse des Instances des Fournisseurs Internet - Région de Sousse
@@ -20,17 +19,20 @@ mini_projet/
 │   ├── essaie.qmd                      # Document de test
 │   └── _extensions/                    # Extensions Quarto (WebR)
 ├── scripts/
-    ├── 00-exploration-dataset-skimr.R   # Exploration du dataset avec skimr
-    ├── 01_chargement.R                  # Exploration du dataset
-    ├── 02_removeCol                     # script de nettoyage 
-    ├── 03_regroupement                  # script de transformation
+│   ├── 00-exploration-dataset-skimr.R   # Exploration du dataset avec skimr
+│    ├── 01_chargement.R                  # Exploration du dataset
+│    ├── 02_removeCol                     # script de nettoyage 
+│    ├── 03_regroupement                  # script de transformation
 │   ├── 04_Analyse_Motif.R               # Analyse de distribution des motifs
 │   ├── 05_Analyse_MotifUnite.R          # Analyse par unité traitante
 │   ├── 06_Analyse_Temporelle.R          # Analyse des tendances temporelles
 │   ├── 07_Analyse_Par_Offre.R           # Segmentation par type d'offre
 │   └── 08_Analyse_Offre_Par_Motif.R     # Relation offre-motif
 ├── data/
-│   └── instances_clean_v1.csv           # Données nettoyées (4723 enregistrements)
+│   └── brute
+            instance.xls               # Données brutes (4723 enregistrements)
+    └── clean
+            instances_clean_v1.csv     # Données nettoyées
 ├── images/                              # Ressources visuelles
 └── README.md                            # Ce fichier
 
