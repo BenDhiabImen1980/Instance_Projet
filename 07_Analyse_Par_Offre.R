@@ -32,5 +32,3 @@ hist <- ggplot(top_offres, aes(x = reorder(Offre, n), y = n)) +
   ) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.15)))
 print(hist)
-
-
